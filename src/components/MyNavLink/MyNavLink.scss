@@ -1,0 +1,12 @@
+.active {
+  background: rgba(0, 0, 0, 0.15);
+}
+.navlink {
+  color: #fff;
+  width: ceil(100% * 1/3);
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  text-decoration: none;
+}
