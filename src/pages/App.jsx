@@ -26,8 +26,9 @@ function App(props) {
     sessionStorage.setItem(types.GLOBAL_COLOR,globalColor)
 
     useEffect(() => {
-        props.setGlobalColor(props.location.pathname)
-    }, [props])
+        props.setGlobalColor(props.location.pathname.slice(1))
+
+    })
 
     return (
         <div className='container' style={{backgroundColor: globalColor}}>
