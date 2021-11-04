@@ -12,7 +12,6 @@ class Header extends Component {
     render() {
         return (
             <div className='header'>
-
                     <Logo src={logoImg} title='itsource.cn'/>
                     <Configuration src={setImg}/>
             </div>

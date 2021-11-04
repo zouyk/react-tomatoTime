@@ -12,7 +12,7 @@ export default function Logo(props) {
     return (
         <div style={style}>
             <img style={{alignSelf:'center'}} alt='' src={props.src}/>
-            <span>设置</span>
+            <span className='setting-span'>设置</span>
         </div>
     )
 }

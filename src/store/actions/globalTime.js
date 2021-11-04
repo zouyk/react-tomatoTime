@@ -6,22 +6,22 @@ let timer = null
 
 export const setTime = (data) => ({type: types.GLOBAL_TIME, data})
 
-export const startTime = (obj) => (dispatch, getState) => {
+export const startTiming = (obj) => (dispatch, getState) => {
 
-    const {name, isPress} = obj
+    const {clockType, isPress} = obj
     const {globalTime} = getState()
 
     clearInterval(timer)
     if (isPress) return
 
     timer = setInterval(() => {
-        const currentTime = dayjs(globalTime[name]).format(DATE_TYPE)
+        const currentTime = dayjs(globalTime[clockType]).format(DATE_TYPE)
         console.log(currentTime)
         if (currentTime === '00:00') {
             clearInterval(timer)
-            alert(getClockEndTip(name) + '时间结束了')
+            alert(getClockEndTip(clockType) + '时间结束了')
         }
-        globalTime[name] = dayjs(globalTime[name]).subtract(1, 'second')
+        globalTime[clockType] = dayjs(globalTime[clockType]).subtract(1, 'second')
         dispatch(setTime(globalTime))
     }, 1000)
 
