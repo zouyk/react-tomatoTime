@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import {DATE_TYPE} from "../../utils/commonMap";
 import {startTiming} from '../../store/actions/globalTime'
-import withClockWrap from "../../mixins/withClockWrap";
+import withClockWrap from "../../hooks/withClockWrap";
 import ClockWrapComponent from "../../components/ClockWrapComponent";
 
 
