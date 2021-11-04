@@ -1,6 +1,6 @@
 import * as types from "../action_types";
 import dayjs from "dayjs";
-import {DATE_TYPE,getClockEndTip} from "../../utils/commonMap";
+import {DATE_TYPE, getClockEndTip} from "../../utils/commonMap";
 
 let timer = null
 
@@ -17,9 +17,9 @@ export const startTime = (obj) => (dispatch, getState) => {
     timer = setInterval(() => {
         const currentTime = dayjs(globalTime[name]).format(DATE_TYPE)
         console.log(currentTime)
-        if(currentTime === '00:00'){
+        if (currentTime === '00:00') {
             clearInterval(timer)
-            alert(getClockEndTip(name)+'时间结束了')
+            alert(getClockEndTip(name) + '时间结束了')
         }
         globalTime[name] = dayjs(globalTime[name]).subtract(1, 'second')
         dispatch(setTime(globalTime))

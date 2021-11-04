@@ -20,4 +20,4 @@ export default connect(state => ({
     time: state.globalTime.restTime.format(DATE_TYPE)
 }), {
     startTime
-})(withClockWrap(RestTime,'restTime'));
+})(withClockWrap(RestTime, 'restTime'));
