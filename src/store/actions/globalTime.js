@@ -20,6 +20,7 @@ export const startTiming = (obj) => (dispatch, getState) => {
         if (currentTime === '00:00') {
             clearInterval(timer)
             alert(getClockEndTip(clockType) + '时间结束了')
+            return
         }
         globalTime[clockType] = dayjs(globalTime[clockType]).subtract(1, 'second')
         dispatch(setTime(globalTime))
