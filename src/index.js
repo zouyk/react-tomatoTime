@@ -5,6 +5,8 @@ import {Provider} from "react-redux";
 import store from '../src/store'
 import App from "./pages/App";
 
+
+
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>

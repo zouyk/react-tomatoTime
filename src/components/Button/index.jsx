@@ -1,14 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import propTypes  from 'prop-types'
 import './button.scss'
 export default function Button(props) {
-    const [isPress, setIsPress] = useState(true)
+    const {color,change,isPress} = props
     const boxShadow =isPress ? '#ebebeb 0 6px 0' : null
-    const {color,change} = props
+
     function clickHandle(){
-        const changeStatue = !isPress
-        setIsPress(changeStatue)
-        change(changeStatue)
+        change(!isPress)
     }
 
 
